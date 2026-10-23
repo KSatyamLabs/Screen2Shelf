@@ -674,3 +674,252 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ---------- Screen2Shelf immersive polish ---------- */
+
+/* Give the existing dark theme a little more cinematic depth. */
+.app {
+  background:
+    radial-gradient(ellipse at 50% -8%, #7044a52b 0%, transparent 42%),
+    radial-gradient(ellipse at 0% 34%, #4d2c6810 0%, transparent 36%),
+    #0b0b0d;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.brand {
+  transition: color 0.2s ease;
+}
+
+.brand:hover {
+  color: #e5d3ff;
+}
+
+.hero {
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  left: 50%;
+  width: min(760px, 100%);
+  height: 310px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #8d53ce13 0%, transparent 70%);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.search-form {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.search-input:focus-visible,
+.search-button:focus-visible,
+.clear-button:focus-visible,
+.suggestion-item:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #c69cff;
+  outline-offset: 3px;
+}
+
+/* Posters should feel like artwork, not plain thumbnails. */
+.movie-grid {
+  align-items: stretch;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  border-color: #ffffff14;
+  border-radius: 16px;
+  background: linear-gradient(155deg, #1a171f 0%, #111013 72%);
+  box-shadow: 0 5px 20px #00000012;
+  isolation: isolate;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  border-color: #c69cff80;
+  box-shadow: 0 18px 42px #0007, 0 0 0 1px #c69cff0b;
+}
+
+.movie-poster-wrapper,
+.movie-card > .poster-placeholder {
+  flex-shrink: 0;
+}
+
+.movie-poster {
+  aspect-ratio: 2 / 3;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1), filter 0.35s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.055);
+  filter: saturate(1.08);
+}
+
+.poster-overlay {
+  inset: 35% 0 0;
+  background: linear-gradient(180deg, transparent 0%, #0b0b0d15 28%, #0b0b0d99 100%);
+  opacity: 0.45;
+}
+
+.movie-card:hover .poster-overlay {
+  opacity: 1;
+}
+
+.movie-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.movie-title {
+  display: -webkit-box;
+  overflow: hidden;
+  min-height: 2.8em;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.movie-year {
+  margin-bottom: 9px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.movie-overview {
+  margin-top: 2px;
+  -webkit-line-clamp: 3;
+}
+
+/* Clear visual separation between discovery sections. */
+.home-movie-section {
+  position: relative;
+}
+
+.home-movie-section + .home-movie-section {
+  padding-top: 30px;
+  border-top: 1px solid #ffffff0d;
+}
+
+.section-heading h2,
+.experience-section h2 {
+  text-wrap: balance;
+}
+
+.section-heading > p:last-child {
+  max-width: 580px;
+}
+
+/* Keep interaction states useful on keyboards and touch devices. */
+.movie-card:focus-within {
+  border-color: #c69cff99;
+  box-shadow: 0 0 0 3px #c69cff1c;
+}
+
+@media (hover: none) {
+  .movie-card:hover {
+    transform: none;
+    box-shadow: 0 5px 20px #00000012;
+  }
+
+  .movie-card:hover .movie-poster {
+    transform: none;
+    filter: none;
+  }
+
+  .movie-card:hover .poster-overlay {
+    opacity: 0.45;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-grid {
+    gap: 24px;
+  }
+
+  .movie-info {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+  }
+
+  .hero::before {
+    top: 0;
+    height: 260px;
+  }
+
+  .movie-card {
+    border-radius: 12px;
+  }
+
+  .movie-info {
+    padding: 10px;
+  }
+
+  .movie-title {
+    min-height: 2.8em;
+    font-size: 13px;
+  }
+
+  .movie-overview {
+    -webkit-line-clamp: 2;
+  }
+
+  .home-movie-section + .home-movie-section {
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero h1 {
+    font-size: clamp(36px, 10vw, 44px);
+    letter-spacing: -1.8px;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.7px;
+  }
+
+  .movie-grid {
+    gap: 12px;
+  }
+
+  .movie-info {
+    padding: 9px;
+  }
+
+  .movie-title {
+    font-size: 12px;
+  }
+
+  .movie-rating {
+    font-size: 12px;
+  }
+}
