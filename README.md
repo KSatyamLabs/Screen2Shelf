@@ -6,11 +6,29 @@ Screen2Shelf is a movie discovery web app that helps you explore books inspired 
 
 Search for a movie, explore what's popular or currently playing in India, and discover related books — all in one place.
 
-## Preview
-
 **[Live Demo](https://screen2-shelf.vercel.app/)** · **[GitHub Repository](https://github.com/KSatyamLabs/Screen2Shelf)**
 
+## Preview
+
 ![Screen2Shelf homepage](screenshots/homepage.png)
+
+## Screenshots
+
+### Movie Search
+
+![Searching for a movie](screenshots/movie-search.png)
+
+### Movie-to-Book Discovery
+
+![Movie search and book discovery journey](screenshots/redirect.png)
+
+### Book Recommendations
+
+![Book recommendations for Project Hail Mary](screenshots/book-results.png)
+
+### Book Covers
+
+![Book covers and related reading suggestions](screenshots/book-covers.png)
 
 ## Features
 
@@ -65,7 +83,7 @@ Search for a movie, explore what's popular or currently playing in India, and di
 
 ### Build for Production
 
-To create a production build, run:
+Create a production build:
 
 ```bash
 npm run build
@@ -79,7 +97,7 @@ npm run preview
 
 ## APIs and Acknowledgements
 
-- Movie information and movie artwork are provided by [TMDB](https://www.themoviedb.org/).
+- Movie information and movie artwork are provided by [The Movie Database (TMDB)](https://www.themoviedb.org/).
 - Book search results and available cover images are provided by [Open Library](https://openlibrary.org/).
 
 This product uses the TMDB API but is not endorsed or certified by TMDB.
