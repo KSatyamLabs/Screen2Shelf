@@ -6,6 +6,12 @@ Screen2Shelf is a movie discovery web app that helps you explore books inspired 
 
 Search for a movie, explore what's popular or currently playing in India, and discover related books — all in one place.
 
+## Preview
+
+**[Live Demo](https://screen2-shelf.vercel.app/)** · **[GitHub Repository](https://github.com/KSatyamLabs/Screen2Shelf)**
+
+![Screen2Shelf homepage](screenshots/homepage.png)
+
 ## Features
 
 - **Movie Search** — Find movies using titles and search suggestions.
