@@ -18,10 +18,6 @@ Search for a movie, explore what's popular or currently playing in India, and di
 
 ![Searching for a movie](screenshots/movie-search.png)
 
-### Movie-to-Book Discovery
-
-![Movie search and book discovery journey](screenshots/redirect.png)
-
 ### Book Recommendations
 
 ![Book recommendations for Project Hail Mary](screenshots/book-results.png)
@@ -29,6 +25,10 @@ Search for a movie, explore what's popular or currently playing in India, and di
 ### Book Covers
 
 ![Book covers and related reading suggestions](screenshots/book-covers.png)
+
+### Movie-to-Book Discovery
+
+![Movie search and book discovery journey](screenshots/redirect.png)
 
 ## Features
 
