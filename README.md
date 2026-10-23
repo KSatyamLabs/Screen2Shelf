@@ -1,16 +1,93 @@
-# React + Vite
+# Screen2Shelf
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**From the movies you love to the books you might love next.**
 
-Currently, two official plugins are available:
+Screen2Shelf is a movie discovery web app that helps you explore books inspired by the stories, themes, and genres of your favorite movies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Search for a movie, explore what's popular or currently playing in India, and discover related books — all in one place.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Movie Search** — Find movies using titles and search suggestions.
+- **Discover Movies** — Explore popular movies and movies currently playing in India.
+- **Book Recommendations** — Discover books related to a selected movie's title, story, and genres.
+- **Explore Similar Themes** — Broaden book discovery when you want more recommendations.
+- **Responsive Interface** — Browse movies and books through a dark-themed interface.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, JavaScript, Vite
+- **Styling:** CSS
+- **Movie Data:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
+- **Book Data:** [Open Library](https://openlibrary.org/)
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (includes npm)
+- A TMDB API credential
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/KSatyamLabs/Screen2Shelf.git
+   cd Screen2Shelf
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the project's root directory and add your TMDB credential:
+
+   ```env
+   VITE_TMDB_API_KEY=your_tmdb_api_credential
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in your terminal.
+
+### Build for Production
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## APIs and Acknowledgements
+
+- Movie information and movie artwork are provided by [TMDB](https://www.themoviedb.org/).
+- Book search results and available cover images are provided by [Open Library](https://openlibrary.org/).
+
+This product uses the TMDB API but is not endorsed or certified by TMDB.
+
+## Environment Variables and Security
+
+- Never commit your `.env` file or publish credentials in your source code.
+- The `VITE_` prefix exposes environment variables to browser-side code. Treat the TMDB credential used by this frontend as visible to users, and configure appropriate restrictions or usage controls where available.
+- Keep `.env` excluded through `.gitignore`.
+
+## Project Status
+
+Screen2Shelf is a personal project built to explore movie discovery, public APIs, and book recommendations.
+
+## License
+
+No license has been specified yet. All rights are reserved by default unless a license is added to this repository.
