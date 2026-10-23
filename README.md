@@ -1,24 +1,24 @@
 # Screen2Shelf
 
-**Loved the movie? Read the feeling.**
+**From the movies you love to the books you might love next.**
 
-Screen2Shelf is a movie discovery web app that helps you discover books inspired by the stories, themes, and genres of your favorite movies.
+Screen2Shelf is a movie discovery web app that helps you explore books inspired by the stories, themes, and genres of your favorite movies.
 
-**[Live Demo](https://screen2-shelf.vercel.app/)** · **[GitHub Repository](https://github.com/KSatyamLabs/Screen2Shelf)**
+Search for a movie, explore what's popular or currently playing in India, and discover related books — all in one place.
 
 ## Preview
 
-<!-- Add your screenshot after saving it to screenshots/homepage.png -->
+**[Live Demo](https://screen2-shelf.vercel.app/)** · **[GitHub Repository](https://github.com/KSatyamLabs/Screen2Shelf)**
 
 ![Screen2Shelf homepage](screenshots/homepage.png)
 
 ## Features
 
-- **Movie Search** — Search for movies by title with autocomplete suggestions.
+- **Movie Search** — Find movies using titles and search suggestions.
 - **Discover Movies** — Explore popular movies and movies currently playing in India.
-- **Book Recommendations** — Find books related to a selected movie's title, story, and genres.
-- **Explore Similar Themes** — Broaden book discovery to find more recommendations.
-- **Dark-Themed Interface** — Explore movies and books through a modern, responsive UI.
+- **Book Recommendations** — Discover books related to a selected movie's title, story, and genres.
+- **Explore Similar Themes** — Broaden book discovery when you want more recommendations.
+- **Responsive Interface** — Browse movies and books through a dark-themed interface.
 
 ## Tech Stack
 
@@ -31,7 +31,7 @@ Screen2Shelf is a movie discovery web app that helps you discover books inspired
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) with npm
+- [Node.js](https://nodejs.org/) (includes npm)
 - A TMDB API credential
 
 ### Installation
@@ -49,7 +49,7 @@ Screen2Shelf is a movie discovery web app that helps you discover books inspired
    npm install
    ```
 
-3. Create a `.env` file in the project root and add your TMDB credential:
+3. Create a `.env` file in the project's root directory and add your TMDB credential:
 
    ```env
    VITE_TMDB_API_KEY=your_tmdb_api_credential
@@ -61,17 +61,17 @@ Screen2Shelf is a movie discovery web app that helps you discover books inspired
    npm run dev
    ```
 
-5. Open the local URL displayed in your terminal.
+5. Open the local URL shown in your terminal.
 
-### Production Build
+### Build for Production
 
-Create a production build:
+To create a production build, run:
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally:
+To preview the production build locally:
 
 ```bash
 npm run preview
@@ -86,9 +86,13 @@ This product uses the TMDB API but is not endorsed or certified by TMDB.
 
 ## Environment Variables and Security
 
-- Do not commit your `.env` file or publish credentials in your source code.
-- Variables prefixed with `VITE_` are exposed in browser-side code. Treat the TMDB credential used by this frontend as visible to users.
+- Never commit your `.env` file or publish credentials in your source code.
+- The `VITE_` prefix exposes environment variables to browser-side code. Treat the TMDB credential used by this frontend as visible to users, and configure appropriate restrictions or usage controls where available.
 - Keep `.env` excluded through `.gitignore`.
+
+## Project Status
+
+Screen2Shelf is a personal project built to explore movie discovery, public APIs, and book recommendations.
 
 ## License
 
